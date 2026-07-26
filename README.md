@@ -4,6 +4,9 @@ RFC 6901 JSON Pointer parsing, formatting, reads, existence checks, immutable
 writes, and immutable removals.
 
 ```ts
+import { getJsonPointer, setJsonPointer } from "@lucid-softworks/json-pointer";
+
+const document = { users: [{ name: "Ada" }] };
 getJsonPointer({ users: [{ name: "Ada" }] }, "/users/0/name"); // "Ada"
 setJsonPointer(document, "/users/0/name", "Grace");
 ```
